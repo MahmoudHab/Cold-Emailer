@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  @font-face {
+    font-family: 'Serif';
+    src: url('../fonts/serif.woff2') format('woff2'),
+         url('../fonts/serif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Compact Medium';
+    src: url('../fonts/compact-medium.woff2') format('woff2'),
+         url('../fonts/compact-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Compact Thin';
+    src: url('../fonts/compact-thin.woff2') format('woff2'),
+         url('../fonts/compact-thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  html {
+    background-color: #0D0E10;
+    color: #EFF0F4;
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 8.5vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 1680px;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  h2 {
+    font-family: 'Serif', serif;
+    font-weight: normal;
+    font-size: 6.5vw;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 100px;
+    letter-spacing: -2px;
+  }
+  
+  h2 br {
+    display: none;
+  }
+  
+  h1, h3 {
+    font-family: 'Compact Medium', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  
+  h3 span {
+    color: rgba(239, 240, 244, 0.2);
+    margin-left: 10px;
+  }
+  
+  p {
+    font-family: 'Compact Thin', sans-serif;
+    font-weight: normal;
+    letter-spacing: .5px;
+    margin-bottom: 30px;
+  }
+  
+  .links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    column-gap: 40px;
+    margin-bottom: 25px;
+  }
+  
+  .links div {
+    margin-bottom: 100px;
+  }
+  
+  .links div:last-child {
+    position: relative;
+    left: 70px;
+  }
+  
+  .links a {
+    font-family: 'Compact Medium', sans-serif;
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    position: relative;
+    margin-right: 30px;
+  }
+  
+  .links a:after,
+  .links a:before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    transition: all .2s ease-in-out;
+  }
+  
+  .links a:before {
+    background-color: rgba(239, 240, 244, 0.1)
+  }
+  
+  .links a:after {
+    background-color: rgba(239, 240, 244, 1);
+    right: 100%;
+  }
+  
+  .links a:hover:after,
+  .links a:focus:after {
+    right: 0;
+  }
+  
+  .work {
+    position: relative;
+  }
+  
+  .ada {
+    width: 260px;
+    position: absolute;
+    right: -50px;
+    top: -150px;
+    z-index: -1;
+    animation: rotation 30s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  
+  .work ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    column-gap: 40px;
+    row-gap: 40px;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    justify-items: stretch;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  
+  .work ul li {
+    margin: 0;
+  }
+  
+  .work a {
+    display: block;
+    border: solid 2px rgba(239, 240, 244, 0.1);
+    border-radius: 5px;
+    margin: 0;
+    background-color: #0D0E10;
+  }
+  
+  .work a:hover,
+  .work a:focus {
+    border: solid 2px rgba(239, 240, 244, 1);
+  }
+  
+  .work ul li img {
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 1330px) {
+  
+    .ada {
+      display: none;
+    }
+  
+    h2 {
+      font-size: 6.5vw;
+    }
+  
+    .links div:last-child {
+  
+      left: 0px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 890px) {
+  
+    html {
+      padding: 14vw 10vw;
+      font-size: 16px;
+    }
+  
+    h1, h3 {
+      font-size: 14px;
+    }
+  
+    h2 {
+      font-size: 17vw;
+      margin-bottom: 80px;
+    }
+  
+    h2 br {
+      display: block;
+    }
+  
+    .work ul, .links {
+      grid-template-columns: 1fr;
+    }
+  
+    p {
+      letter-spacing: 0;
+    }
+   }   
